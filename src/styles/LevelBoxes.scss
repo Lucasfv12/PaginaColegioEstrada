@@ -1,0 +1,63 @@
+.level-boxes {
+  display: flex;
+  justify-content: space-around; /* Espaciado uniforme entre cajas */
+  gap: 20px; /* Espacio entre las cajas */
+  margin: 20px 0;
+}
+
+.box {
+  background-color: #186ddd; /* Color de fondo */
+  color: white; /* Texto en blanco */
+  padding: 20px;
+  width: 300px; /* Ajusta este ancho para hacerlas más largas */
+  height: 200px; /* Altura para un diseño más rectangular */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  border-radius: 8px; /* Bordes redondeados para estética */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.box:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.logo {
+  margin-top: 20px;
+  font-size: 50px; /* Tamaño del logo */
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.titulo-box {
+  margin-top: 100px; /* Espacio para logo */
+  font-weight: bold;
+  text-transform: uppercase;
+  left: 10px;
+}
+
+.circle-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1f76bd;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-button:hover {
+  background-color: #e0e0e0;
+}

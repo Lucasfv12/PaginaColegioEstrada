@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0); /* Fondo semi-transparente */
+  position: absolute; /* Para que esté sobre el carrusel */
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 20; /* Asegúrate de que esté sobre otros elementos */
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+.navbar.scrolled {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /* Fondo más opaco al hacer scroll */
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espacio entre los enlaces */
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black; /* Color del texto de los enlaces */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline; /* Efecto al pasar el mouse */
+}
