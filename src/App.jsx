@@ -8,6 +8,7 @@ import Inscripcion2025 from "./Components/Inscripcion2025";
 import Footer from "./Components/Footer";
 import FormularioCarteles from "./Components/FormularioCarteles";
 import DatosInstituto from "./Components/DatosInstituto";
+import CampusCultura from "./Components/CampusCultura";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,6 +38,7 @@ function App() {
       <LevelBoxes />
       <Inscripcion2025 ref={inscripcionRef} />
       <FormularioCarteles />
+      <CampusCultura />
       <DatosInstituto />
       <Footer />
     </div>
