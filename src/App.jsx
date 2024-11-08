@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import TopBar from "./Components/TopBar";
 import CarouselComponent from "./Components/CarouselComponent";
 import LevelBoxes from "./Components/LevelBoxes";
-import NavBar from "./Components/NavBar"; // Asegúrate de importar el NavBar
-import "./styles/App.scss"; // Asegúrate de tener este archivo
+import NavBar from "./Components/Navbar";
+import "./styles/App.scss";
+import Inscripcion2025 from "./Components/Inscripcion2025";
+import Footer from "./Components/Footer";
+import FormularioCarteles from "./Components/FormularioCarteles";
+import DatosInstituto from "./Components/DatosInstituto";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const inscripcionRef = useRef(null);
 
   const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 50) {
+    const inscripcionPosition = inscripcionRef.current.getBoundingClientRect();
+    if (inscripcionPosition.top <= 0 && !scrolled) {
       setScrolled(true);
-    } else {
+    } else if (inscripcionPosition.top > 0 && scrolled) {
       setScrolled(false);
     }
   };
@@ -22,15 +27,18 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrolled]);
 
   return (
     <div>
       <TopBar />
-      <NavBar className={scrolled ? "scrolled" : ""} />{" "}
-      {/* Aquí pasamos la clase */}
+      <NavBar className={scrolled ? "scrolled" : ""} />
       <CarouselComponent />
       <LevelBoxes />
+      <Inscripcion2025 ref={inscripcionRef} />
+      <FormularioCarteles />
+      <DatosInstituto />
+      <Footer />
     </div>
   );
 }

@@ -3,33 +3,42 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0); /* Fondo semi-transparente */
-  position: absolute; /* Para que esté sobre el carrusel */
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
   top: 40px;
   left: 0;
   right: 0;
-  z-index: 20; /* Asegúrate de que esté sobre otros elementos */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  z-index: 20;
+  transition: background-color 0.3s ease, position 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0
-  ); /* Fondo más opaco al hacer scroll */
+  background-color: white;
+  position: fixed;
+  top: 0;
 }
 
-.navbar-brand {
-  font-size: 24px;
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 40px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar-text {
+  font-size: 18px;
   font-weight: bold;
+  color: black;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espacio entre los enlaces */
+  gap: 20px;
 }
 
 .navbar-links li {
@@ -38,12 +47,12 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: black; /* Color del texto de los enlaces */
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
 }
 
 .navbar-links a:hover {
-  text-decoration: underline; /* Efecto al pasar el mouse */
+  text-decoration: underline;
 }

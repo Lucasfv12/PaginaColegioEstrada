@@ -1,10 +1,18 @@
 import React from "react";
-import "../styles/NavBar.scss"; // Asegúrate de que estás importando el archivo de estilos
+import "../styles/NavBar.scss";
+import logo from "../assets/Escudosinfondo.png"; // Asegúrate de que la ruta sea correcta
 
 const NavBar = ({ className }) => {
   return (
     <nav className={`navbar ${className}`}>
-      <div className="navbar-brand"></div>
+      <div className="navbar-left">
+        {className === "scrolled" && (
+          <>
+            <img src={logo} alt="Instituto Logo" className="navbar-logo" />
+            <span className="navbar-text">Instituto José Manuel Estrada</span>
+          </>
+        )}
+      </div>
       <ul className="navbar-links">
         <li>
           <a href="#institucional">Institucional</a>
